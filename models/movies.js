@@ -2,6 +2,7 @@ var mongoose = require('mongoose')
 
 var comSchema = mongoose.Schema({
     name : String,
+    email : String,
     
 })
 

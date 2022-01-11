@@ -14,11 +14,11 @@ router.post('/wishlist-movie', async function(req, res, next) {
 
   var newCom = new comModel({
     name: req.body.nameFromFront,
- 
+ email : "",
   })
 
   var comSave = await newCom.save()
-console.log(comSave)
+
   var result = false
   if(comSave.name){
     result = true
@@ -47,3 +47,25 @@ router.get('/wishlist-movie', async function(req, res, next) {
 });
 
 module.exports = router;
+
+router.get("/validation", async function(req, res, next){
+var resultat = []
+ var id = req.query.id
+
+var user = await comModel.findById(id)
+resultat.push(user.name)
+console.log(resultat)
+res.json({resultat})
+ })
+
+ router.post('/email', async function(req, res, next){
+  var id = req.query.id
+  email = req.body.email
+  console.log(email)
+  var resultat = [await comModel.updateOne({ _id : req.query.id},
+ { email: req.body.email })]
+ 
+  console.log(req.body.email)
+  console.log(req.query.id)
+ res.json({resultat})
+ })

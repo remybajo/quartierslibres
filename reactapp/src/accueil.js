@@ -120,7 +120,7 @@ var resultat = [];
 
 
   var handleSubmit = async () => {
-  
+   
 
     for (var i =0; i < moviesWishList.length; i++){
     resultat.push(moviesWishList[i].name) }
@@ -129,15 +129,19 @@ var resultat = [];
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: `nameFromFront=${resultat}`
     })
+
+
     
     const body = await data.json()
     console.log(body.result)
     var find = body.comSave._id
 
     if (body.result === true){
-    setId(find) }
+    setId(find)
+    var rawResponse = await fetch(`/validation?id=${find}`);
+    var response = await rawResponse.json();
+    console.log(response); }
 
-    console.log()
   }
 
 if (id){
