@@ -40,9 +40,7 @@ function Validation () {
             
         }
         )
-        if (email){
-            return (<Link to="/"/>)
-        } }
+        return (<Link to="/"/>) }
             
 
     
@@ -74,7 +72,7 @@ function Validation () {
 <div style={{display:"flex", justifyContent:"center", flexDirection:"column" }} >
         <Input onChange={(e) => setEmail(e.target.value)} className="Login-input" placeholder="email" />
 
-        <Button style={{textAlign:"center"}} onClick={() => handleSubmitMail()}> Valider </Button>
+        <Button style={{textAlign:"center"}} onClick={() => handleSubmitMail()}> <Link to="/" style={{color:"black"}}> Valider </Link> </Button>
         </div>
   
 </div>

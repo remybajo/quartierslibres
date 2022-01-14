@@ -40,7 +40,7 @@ function Movie(props) {
 
   return (
     <Col xs="12" lg="6" xl="4">
-    <Card style={{marginBottom:30}}>
+    <Card style={{marginBottom:30, height:"450px"}}>
     <CardImg style={{width:"100%", height:"200px"}}top src={props.movieImg} alt={props.movieTitre} />
     <CardBody>
        
