@@ -298,50 +298,50 @@ if (id){
         </Row>
 
         <div style={{backgroundColor: "rgb(255, 200, 0)", height:"40px", display:"flex", justifyContent:"center", alignItems:"center", marginBottom:"10px"}}>
-                <p style={{fontWeight:"bold"}}> Les évènements de mon quartier </p>
+                <p style={{fontWeight:"bold"}}> Les bijoutiers de mon quartier </p>
          </div>
     
         <Row>           
           {bijouxList}        
         </Row>
         <div style={{backgroundColor: "rgb(255, 200, 0)", height:"40px", display:"flex", justifyContent:"center", alignItems:"center", marginBottom:"10px"}}>
-                <p style={{fontWeight:"bold"}}> Les concepts Store</p>
+                <p style={{fontWeight:"bold"}}> Les concepts Store de mon quartier </p>
          </div>   
         <Row>
           {conceptList}
         </Row>
         <div style={{backgroundColor: "rgb(255, 200, 0)", height:"40px", display:"flex", justifyContent:"center", alignItems:"center", marginBottom:"10px"}}>
-                <p style={{fontWeight:"bold"}}> Les centres culturels et artistiques </p>
+                <p style={{fontWeight:"bold"}}> Les centres culturels et artistiques de mon quartier </p>
          </div>   
         <Row>
           {cultureList}
         </Row>
         <div style={{backgroundColor: "rgb(255, 200, 0)", height:"40px", display:"flex", justifyContent:"center", alignItems:"center", marginBottom:"10px"}}>
-                <p style={{fontWeight:"bold"}}> Les centres culturels et artistiques </p>
+                <p style={{fontWeight:"bold"}}> Les galeries d'arts de mon quartier  </p>
          </div>   
         <Row>
           {galerieList}
         </Row>
         <div style={{backgroundColor: "rgb(255, 200, 0)", height:"40px", display:"flex", justifyContent:"center", alignItems:"center", marginBottom:"10px"}}>
-                <p style={{fontWeight:"bold"}}> Les centres culturels et artistiques </p>
+                <p style={{fontWeight:"bold"}}> Les lieux musicaux de mon quartier </p>
          </div>   
         <Row>
           {musiqueList}
         </Row>
         <div style={{backgroundColor: "rgb(255, 200, 0)", height:"40px", display:"flex", justifyContent:"center", alignItems:"center", marginBottom:"10px"}}>
-                <p style={{fontWeight:"bold"}}> Santé et Bien Être</p>
+                <p style={{fontWeight:"bold"}}> Les peintres de mon quartier </p>
          </div>   
         <Row>
           {peintreList}
         </Row>
         <div style={{backgroundColor: "rgb(255, 200, 0)", height:"40px", display:"flex", justifyContent:"center", alignItems:"center", marginBottom:"10px"}}>
-                <p style={{fontWeight:"bold"}}> Santé et Bien Être</p>
+                <p style={{fontWeight:"bold"}}> Les pottiers de mon quartier </p>
          </div>   
         <Row>
           {potterieList}
         </Row>
         <div style={{backgroundColor: "rgb(255, 200, 0)", height:"40px", display:"flex", justifyContent:"center", alignItems:"center", marginBottom:"10px"}}>
-                <p style={{fontWeight:"bold"}}> Les centres culturels et artistiques </p>
+                <p style={{fontWeight:"bold"}}> Les lieux santé et bien être de mon quartier </p>
          </div>   
         <Row>
         {santeList}
