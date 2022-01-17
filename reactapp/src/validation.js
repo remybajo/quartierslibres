@@ -1,11 +1,13 @@
 import React, {useState, useEffect} from 'react';
 import { Redirect, useParams, Link } from 'react-router-dom';
+
 import { 
 Input,
     Button,
     Nav,
     NavItem,
     NavLink,
+    Modal, ModalBody, ModalHeader,
  Card,
  CardBody,
   
@@ -17,6 +19,8 @@ function Validation () {
   const  [revoir, setRevoir] = useState(false)
   const [article, setArticle] = useState()
   const [email, setEmail] = useState("")
+const [open, setOpen] = useState(true)
+
   var { id } = useParams();
   useEffect(() => {
         const ProfilComment = async () => {
@@ -32,7 +36,7 @@ function Validation () {
  
         
     var handleSubmitMail = async () => {
-       
+       setRevoir(true)
         const data = await fetch(`/email?id=${id}`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -43,7 +47,18 @@ function Validation () {
         return (<Link to="/"/>) }
             
 
-    
+    if (revoir){
+        return (<Modal isOpen={open} toggle={() => setOpen(false)}>
+        <ModalHeader>
+          Votre Mail à bien été pris en compte
+        </ModalHeader>
+        <ModalBody>
+          Vous recevrez dans 15 jours votre premier journal !
+          <Button style={{textAlign:"center"}}> <Link style={{backgroundColor:"grey"}} to="/" style={{color:"black"}}> Valider </Link> </Button>
+        </ModalBody>
+
+      </Modal>)
+    }
    
   
 
@@ -72,7 +87,7 @@ function Validation () {
 <div style={{display:"flex", justifyContent:"center", flexDirection:"column" }} >
         <Input onChange={(e) => setEmail(e.target.value)} className="Login-input" placeholder="email" />
 
-        <Button style={{textAlign:"center"}} onClick={() => handleSubmitMail()}> <Link to="/" style={{color:"black"}}> Valider </Link> </Button>
+        <Button style={{textAlign:"center"}} onClick={() => handleSubmitMail()}>  Valider </Button>
         </div>
   
 </div>
